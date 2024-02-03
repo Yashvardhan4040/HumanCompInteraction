@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Controller</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Smart Home Controller</h1>
+
+<button onclick="toggleLight()">Toggle Light</button>
+<button onclick="toggleFan()">Toggle Fan</button>
+
+<script>
+    var lightStatus = "OFF";
+    var fanStatus = "OFF";
+
+    function toggleLight() {
+        lightStatus = (lightStatus === "OFF") ? "ON" : "OFF";
+        displayStatus();
+    }
+
+    function toggleFan() {
+        fanStatus = (fanStatus === "OFF") ? "ON" : "OFF";
+        displayStatus();
+    }
+
+    function displayStatus() {
+        alert("Light Status: " + lightStatus + "\nFan Status: " + fanStatus);
+    }
+</script>
+
+</body>
+</html>
