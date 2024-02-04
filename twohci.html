@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Controller with User Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        button, input {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+        }
+
+        #status {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Smart Home Controller</h1>
+
+<label for="initialLight">Initial Light Status:</label>
+<input type="text" id="initialLight" placeholder="ON or OFF">
+
+<label for="initialFan">Initial Fan Status:</label>
+<input type="text" id="initialFan" placeholder="ON or OFF">
+
+<button onclick="toggleLight()">Toggle Light</button>
+<button onclick="toggleFan()">Toggle Fan</button>
+
+<div id="status">Light Status: OFF<br>Fan Status: OFF</div>
+
+<script>
+    var lightStatus = "OFF";
+    var fanStatus = "OFF";
+
+    // Get initial statuses from user input
+    var initialLightInput = document.getElementById("initialLight").value.toUpperCase();
+    var initialFanInput = document.getElementById("initialFan").value.toUpperCase();
+
+    // Validate initial statuses
+    if (initialLightInput === "ON" || initialLightInput === "OFF") {
+        lightStatus = initialLightInput;
+    }
+
+    if (initialFanInput === "ON" || initialFanInput === "OFF") {
+        fanStatus = initialFanInput;
+    }
+
+    // Display initial statuses
+    displayStatus();
+
+    function toggleLight() {
+        lightStatus = (lightStatus === "OFF") ? "ON" : "OFF";
+        displayStatus();
+    }
+
+    function toggleFan() {
+        fanStatus = (fanStatus === "OFF") ? "ON" : "OFF";
+        displayStatus();
+    }
+
+    function displayStatus() {
+        var statusElement = document.getElementById("status");
+        statusElement.innerHTML = "Light Status: " + lightStatus + "<br>Fan Status: " + fanStatus;
+    }
+</script>
+
+</body>
+</html>
