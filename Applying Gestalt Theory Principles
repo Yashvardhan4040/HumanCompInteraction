@@ -95,3 +95,49 @@
     }
   </style>
 </head>
+<body>
+
+  <header>
+    <h1>Gestalt Theory Website</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Applying Gestalt Theory Principles</h2>
+    <div class="container">
+      <div class="box" id="proximity">
+        Proximity
+        <button onclick="showMeaning('proximity')">What is Proximity?</button>
+      </div>
+      <div class="box" id="similarity">
+        Similarity
+        <button onclick="showMeaning('similarity')">What is Similarity?</button>
+      </div>
+      <div class="box" id="continuity">
+        Continuity
+        <button onclick="showMeaning('continuity')">What is Continuity?</button>
+      </div>
+      <div class="box" id="closure">
+        Closure
+        <button onclick="showMeaning('closure')">What is Closure?</button>
+      </div>
+      <div class="box" id="figure-ground">
+        Figure-ground
+        <button onclick="showMeaning('figure-ground')">What is Figure-ground?</button>
+      </div>
+      <div class="box" id="symmetry">
+        Symmetry
+        <button onclick="showMeaning('symmetry')">What is Symmetry?</button>
+      </div>
+    </div>
+    <div id="meaning"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Gestalt Theory Website</p>
+  </footer>
+
