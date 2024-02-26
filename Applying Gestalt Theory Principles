@@ -141,3 +141,35 @@
     <p>&copy; 2024 Gestalt Theory Website</p>
   </footer>
 
+  <script>
+    function showMeaning(term) {
+      const meaningDiv = document.getElementById('meaning');
+      switch (term) {
+        case 'proximity':
+          meaningDiv.textContent = "Proximity refers to the tendency to perceive objects that are close to each other as part of the same group.";
+          break;
+        case 'similarity':
+          meaningDiv.textContent = "Similarity is the principle that elements that are similar in appearance are perceived as belonging together.";
+          break;
+        case 'continuity':
+          meaningDiv.textContent = "Continuity suggests that the human eye prefers to see continuous and smooth lines or patterns.";
+          break;
+        case 'closure':
+          meaningDiv.textContent = "Closure is the tendency to perceive incomplete figures as complete by filling in any gaps.";
+          break;
+        case 'figure-ground':
+          meaningDiv.textContent = "Figure-ground is the perception of objects as being either in the foreground or the background of an image.";
+          break;
+        case 'symmetry':
+          meaningDiv.textContent = "Symmetry is the quality of being made up of exactly similar parts facing each other or around an axis.";
+          break;
+        default:
+          meaningDiv.textContent = "";
+          break;
+      }
+    }
+  </script>
+
+</body>
+</html>
+
