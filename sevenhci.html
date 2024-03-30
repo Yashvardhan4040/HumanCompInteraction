@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        nav {
+            display: inline-block;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li button {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* Main Styles */
+        main {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        main h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .dropdown, .cascading-menu, .hamburger-menu {
+            margin: 0 auto 20px;
+            display: inline-block;
+        }
+
+        .dropdown-btn, .cascading-btn, .hamburger-btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 20px 40px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .dropdown-content, .cascading-content, .hamburger-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content, .cascading-menu:hover .cascading-content, .hamburger-menu:hover .hamburger-content {
+            display: block;
+        }
+
+        .cascading-submenu {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+        }
+
+        .cascading-menu:hover .cascading-content .cascading-submenu {
+            display: block;
+        }
+
+        .cascading-content button, .cascading-submenu button {
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            text-align: left;
+            color: #333;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><button>Home</button></li>
+                    <li><button>About</button></li>
+                    <li><button>Services</button></li>
+                    <li class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <button type="submit">Search</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Different Types of Menus</h1>
+            <div class="dropdown">
+                <button class="dropdown-btn">Dropdown Menu</button>
+                <div class="dropdown-content">
+                    <button>Option 1</button>
+                    <br>
+                    <button>Option 2</button>
+                    <br>
+                    <button>Option 3</button>
+                </div>
+            </div>
+            
+            <div class="cascading-menu">
+                <button class="cascading-btn">Cascading Menu</button>
+                <div class="cascading-content">
+                    <button>Option 1</button>
+                    <div class="cascading-submenu">
+                        <button>Suboption 1</button>
+                        <button>Suboption 2</button>
+                    </div>
+                    <button>Option 2</button>
+                    <button>Option 3</button>
+                </div>
+            </div>
+
+            <div class="hamburger-menu">
+                <button class="hamburger-btn">☰</button>
+                <div class="hamburger-content">
+                    <button>Option 1</button>
+                    <button>Option 2</button>
+                    <button>Option 3</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Contact Us</p>
+            <p>Legal Information</p>
+        </div>
+    </footer>
+</body>
+</html>
