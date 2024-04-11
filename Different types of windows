@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Primary Window with Secondary Windows</title>
+<style>
+  /* CSS for styling the windows */
+  .window {
+    border: 2px solid #4CAF50;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f1f1f1;
+  }
+</style>
+</head>
+<body>
+
+<!-- Primary Window -->
+<div class="window" id="primaryWindow">
+  <h2>Primary Window</h2>
+  
+  <!-- Dialog Box -->
+  <div class="window" id="dialogBox">
+    <h3>Dialog Box</h3>
+    <button onclick="showDialog()">Open Dialog</button>
+  </div>
+  
+  <!-- Property Sheet -->
+  <div class="window" id="propertySheet">
+    <h3>Property Sheet</h3>
+    <button onclick="showPropertySheet()">Open Property Sheet</button>
+  </div>
+  
+  <!-- Palette Window -->
+  <div class="window" id="paletteWindow">
+    <h3>Palette Window</h3>
+    <button onclick="showPalette()">Open Palette</button>
+  </div>
+  
+  <!-- Alert Window -->
+  <div class="window" id="alertWindow">
+    <h3>Alert Window</h3>
+    <button onclick="showAlert()">Show Alert</button>
+  </div>
+</div>
+
+<script>
+  // JavaScript for functionality
+  
+  function showDialog() {
+    // Simulate a dialog box by displaying an alert
+    alert("This is a dialog box.");
+  }
+  
+  function showPropertySheet() {
+    // Simulate a property sheet by displaying a form
+    const propertySheetWindow = document.getElementById("propertySheet");
+    propertySheetWindow.innerHTML = `
+      <h3>Property Sheet</h3>
+      <form>
+        <label for="propertyName">Property Name:</label>
+        <input type="text" id="propertyName" name="propertyName" value="Example Property">
+        <br>
+        <label for="propertyValue">Property Value:</label>
+        <input type="text" id="propertyValue" name="propertyValue" value="Example Value">
+        <br>
+        <button type="submit">Save</button>
+      </form>`;
+  }
+  
+  function showPalette() {
+    // Simulate a palette window by displaying a list of options
+    const paletteWindow = document.getElementById("paletteWindow");
+    paletteWindow.innerHTML = `
+      <h3>Palette Window</h3>
+      <ul>
+        <li>Option 1</li>
+        <li>Option 2</li>
+        <li>Option 3</li>
+      </ul>`;
+  }
+  
+  function showAlert() {
+    // Simulate an alert window by displaying an alert within the primary window
+    alert("This is an alert window.");
+  }
+</script>
+
+</body>
+</html>
