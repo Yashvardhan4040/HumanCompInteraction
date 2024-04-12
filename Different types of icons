@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Google Icons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+    /* Centered container */
+    body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* Align items vertically */
+    }
+
+    /* Enlarged Google Icons */
+    .material-icons {
+        font-size: 100px; /* Adjust the font size for larger icons */
+    }
+</style>
+</head>
+<body>
+
+<h1>Google Icon Library</h1>
+
+<div>
+    <p>Some Google icons:</p>
+    <i class="material-icons">cloud</i>
+    <i class="material-icons">favorite</i>
+    <i class="material-icons">attachment</i>
+    <i class="material-icons">computer</i>
+    <i class="material-icons">traffic</i>
+</div>
+
+<div>
+    <p>Styled Google icons (size and color):</p>
+    <i class="material-icons" style="font-size:80px;">cloud</i>
+    <i class="material-icons" style="font-size:120px;">cloud</i>
+    <i class="material-icons" style="font-size:160px;color:red;">cloud</i>
+    <i class="material-icons" style="font-size:200px;color:lightblue;">cloud</i>
+</div>
+
+</body>
+</html>
